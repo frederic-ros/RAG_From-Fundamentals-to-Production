@@ -1,0 +1,20 @@
+# ch22-failure-points — dependencies
+
+numpy>=1.24.0          # vectors and metrics
+scikit-learn>=1.3.0   # TF-IDF du retrieval en mode hors-ligne (repli)
+
+# --- Optional: for REAL-WORLD use -----------------------------------
+# sentence-transformers gives a REAL dense embedding engine:
+#   sentence-transformers>=2.2.0   (model all-MiniLM-L6-v2)
+#   If it is absent, ragdiag.py falls back to deterministic TF-IDF retrieval.
+#
+# ollama gives a REAL local LLM (generation + a RAGAS-style judge):
+#   ollama>=0.3.0
+#   Requires the Ollama server installed and a model pulled, e.g.
+#       ollama pull llama3.2
+#   Then:  OLLAMA_MODEL=llama3.2 python lab22-2_ragas.py
+#   If it is absent or unreachable, ragdiag.py falls back to a generator
+#   extractif et a deterministic judge : the labs stay runnable et
+#   reproductibles, and the teaching point of each failure stays visible.
+#
+# NO API key is ever required: Ollama runs locally.

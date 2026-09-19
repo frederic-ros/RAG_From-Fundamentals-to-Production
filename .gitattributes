@@ -1,0 +1,18 @@
+﻿# Normalise line endings: LF in the repository, native in the working copy.
+* text=auto
+
+# Explicitly text
+*.py   text
+*.md   text
+*.txt  text
+*.csv  text
+*.tsv  text
+*.json text
+
+# Explicitly binary: never touch these
+*.png  binary
+*.pdf  binary
+*.docx binary
+*.pptx binary
+*.xlsx binary
+*.npy  binary

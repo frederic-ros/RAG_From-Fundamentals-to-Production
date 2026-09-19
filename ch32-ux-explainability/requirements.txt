@@ -1,0 +1,15 @@
+# ch32-ux-explainability — dependencies
+
+numpy>=1.24.0          # vectors, metrics, calibration (ECE)
+scikit-learn>=1.3.0    # TF-IDF (mode hors-ligne)
+
+# --- Optional: for REAL-WORLD use -----------------------------------
+# sentence-transformers gives a REAL dense embedding engine, which improves
+# citation-to-fragment anchoring (sentence-to-sentence similarity):
+#   sentence-transformers>=2.2.0   (model all-MiniLM-L6-v2)
+#   If it is absent, uxkit.py falls back to deterministic lexical anchoring.
+#
+# The interface demos (Lab 32-1 et Lab 32-3) are STANDALONE HTML/JS files:
+# they open straight in a browser, with no server and no dependency.
+#
+# NO API key is ever required.

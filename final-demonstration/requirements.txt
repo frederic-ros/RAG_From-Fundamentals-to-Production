@@ -1,0 +1,9 @@
+# final-demonstration — dependencies
+numpy>=1.24.0          # vectors, scoring and the measurement harness
+
+# The embedding is held constant on purpose for the whole demonstration: the
+# gain measured between the naive and the robust pipeline must come from the
+# representation of the documents, never from a stronger model.
+#
+# Run generate_corpus.py once before the super-lab.
+# No API key is required to run the labs.

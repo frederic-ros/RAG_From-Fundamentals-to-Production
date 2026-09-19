@@ -1,0 +1,10 @@
+# ch12-chunking — dependencies
+scikit-learn>=1.3.0    # TF-IDF search and semantic chunking (Lab 12-3, 12-5)
+
+# tiktoken gives the real OpenAI token count (optional).
+#   tiktoken>=0.5.0
+#   If it is absent or cannot download its encoding, the tokenizer.py module
+#   falls back automatically to a deterministic approximate count (words + punctuation),
+#   enough for the labs and fully offline.
+#
+# No API key is required to run the labs.

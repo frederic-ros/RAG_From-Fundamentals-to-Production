@@ -1,0 +1,14 @@
+# ch10-vision — dependencies
+Pillow>=10.0.0          # generating and reading images
+matplotlib>=3.7.0       # generating the test chart
+scikit-learn>=1.3.0     # vector search (Lab 10-5)
+
+# OCR (Lab 10-1): pytesseract plus the tesseract binary.
+#   pytesseract>=0.3.10
+#   The tesseract engine must be installed separately (apt install tesseract-ocr).
+#   Failing that, Lab 10-1 falls back automatically to a deterministic simulated OCR.
+#
+# Vision (Lab 10-2, Lab 10-3) : deterministic OFFLINE mode by default, nothing to install.
+#   Optional LOCAL mode: Ollama with a vision model (`ollama pull llava`).
+#
+# No API key is required to run the labs.

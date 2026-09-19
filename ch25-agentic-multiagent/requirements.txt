@@ -1,0 +1,25 @@
+# ch25-agentic-multiagent — dependencies
+
+numpy>=1.24.0          # vectors and metrics
+scikit-learn>=1.3.0   # TF-IDF du retrieval en mode hors-ligne (repli)
+
+# --- Optional: for REAL-WORLD use -----------------------------------
+# sentence-transformers gives a REAL dense embedding engine:
+#   sentence-transformers>=2.2.0   (model all-MiniLM-L6-v2)
+#   If it is absent, agentkit.py falls back to deterministic TF-IDF retrieval.
+#
+# ollama gives a REAL local LLM as the agents' brain:
+#   - the conditional router (search or answer) ;
+#   - multi-agent planning and synthesis ;
+#   - drafting answers and recommendations.
+#   ollama>=0.3.0
+#   Requires the Ollama server and a model pulled, e.g.  ollama pull llama3.2
+#   Then:  OLLAMA_MODEL=llama3.2 python lab25-1_workflow_vs_agent.py
+#   If it is absent, agentkit.py falls back to deterministic decisions : the labs
+#   stay runnable and reproducible, and the chapter's thesis (the PLACE of the
+#   decision) stays fully visible.
+#
+# Long-term memory (Lab 25-3, Lab 25-5) is a REAL local persistent JSON file:
+# re-run the lab and the memories of the previous session are recovered.
+#
+# NO API key is ever required.

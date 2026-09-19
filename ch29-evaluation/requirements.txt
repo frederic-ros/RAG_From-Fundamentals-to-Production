@@ -1,0 +1,21 @@
+# ch29-evaluation — dependencies
+
+numpy>=1.24.0          # vectors and metrics
+scikit-learn>=1.3.0    # TF-IDF (mode hors-ligne)
+
+# --- Optional: for REAL-WORLD use -----------------------------------
+# sentence-transformers gives a REAL dense embedding engine:
+#   sentence-transformers>=2.2.0   (model all-MiniLM-L6-v2)
+#   If it is absent, evalkit.py falls back to deterministic TF-IDF retrieval.
+#
+# ollama gives a REAL local LLM for:
+#   - the faithfulness / relevance judge with chain-of-thought (Lab 29-1, 29-3) ;
+#   - generating answers grounded in the context (PipelineRAG) ;
+#   - synthetic generation of the golden set (Lab 29-2).
+#   ollama>=0.3.0
+#   Requires the Ollama server and a model pulled, e.g.  ollama pull mistral
+#   Then:  OLLAMA_MODEL=mistral python lab29-1_triad_pipeline.py
+#   If it is absent, evalkit.py utilise a deterministic judge (overlap of
+#   facts) and extractive generation: the labs stay reproducible.
+#
+# NO API key is ever required.

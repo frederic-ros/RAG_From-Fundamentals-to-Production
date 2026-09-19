@@ -1,0 +1,12 @@
+# ch18-retrieval — dependencies
+scikit-learn>=1.3.0    # dense-search fallback (deterministic TF-IDF, offline)
+
+# Optional — real dense embeddings (they expose the dense blind spot natively) :
+#   sentence-transformers>=2.2.0   (model all-MiniLM-L6-v2)
+#   Without it, embeddings.py falls back to TF-IDF with semantic normalisation.
+
+# Optional — production BM25 (in place of bm25.py, identical interface) :
+#   rank_bm25>=0.2.2
+#   bm25.py (in-house implementation) requires NO dependency.
+
+# No API key is required to run the labs.

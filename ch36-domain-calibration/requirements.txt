@@ -1,0 +1,18 @@
+# ch36-domain-calibration — dependencies
+
+numpy>=1.24.0          # vectors and metrics
+scikit-learn>=1.3.0    # TF-IDF (mode hors-ligne)
+
+# --- Optional: for REAL-WORLD use -----------------------------------
+# sentence-transformers gives a REAL dense embedding engine:
+#   sentence-transformers>=2.2.0   (model all-MiniLM-L6-v2)
+#   If it is absent, calibkit.py falls back to deterministic TF-IDF retrieval.
+#
+# ollama gives a REAL local LLM for PRE-ANNOTATION (proposing the criticality
+# and the authority of a document from its content):
+#   ollama>=0.3.0   —  ex. :  ollama pull mistral
+#   Then:  OLLAMA_MODEL=mistral python lab36-1_calibrate_and_measure.py
+#   If it is absent, calibkit.py uses deterministic rules : the lab stays
+#   runnable and reproducible.
+#
+# NO API key is ever required.

@@ -1,0 +1,40 @@
+# ===========================================================================
+#  RAG — From Fundamentals to Production
+#  GLOBAL dependencies of every lab, installed in one go.
+#
+#  Install:  pip install -r requirements-all.txt
+#
+#  Most labs need only numpy + scikit-learn. The other libraries serve
+#  only a few chapters, indicated below.
+#  Each chapter also keeps its own minimal requirements.txt.
+#  NO API key is ever required: everything runs offline.
+# ===========================================================================
+
+# --- Common base (nearly every lab) ---
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# --- Lexical search / BM25 (ch01, ch18) ---
+rank-bm25
+
+# --- Office documents: Word / PDF / PowerPoint (ch08) ---
+python-docx>=1.1.0
+pdfplumber>=0.11.0
+pypdf>=4.0.0
+python-pptx>=0.6.23
+reportlab>=4.0.0        # generation of the test documents
+
+# --- Tables and structured data (ch09) ---
+pandas>=2.0.0
+openpyxl>=3.1.0
+
+# --- Vision / images (ch10) ---
+Pillow>=10.0.0
+
+# --- Heterogeneous web: RSS feeds, page extraction (ch11) ---
+feedparser>=6.0.0
+readability-lxml>=0.8.1
+beautifulsoup4>=4.12.0
+
+# --- Visualisation (a few evaluation labs, ch29) ---
+matplotlib>=3.7.0

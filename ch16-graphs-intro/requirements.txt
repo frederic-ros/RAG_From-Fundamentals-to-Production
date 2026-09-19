@@ -1,0 +1,10 @@
+# ch16-graphs-intro — dependencies
+scikit-learn>=1.3.0    # TF-IDF similarity search (deterministic baseline)
+
+# sentence-transformers donne de vrais embeddings denses (optionnel).
+#   sentence-transformers>=2.2.0
+#   If it is absent, or if the model cannot load offline, the module
+#   embeddings.py falls back automatically to TF-IDF, fully offline.
+#
+# The graph (graph.py) is pure Python: no graph database (Neo4j) required.
+# No API key is required to run the labs.

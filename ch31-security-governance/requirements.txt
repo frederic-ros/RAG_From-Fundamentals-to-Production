@@ -1,0 +1,20 @@
+# ch31-security-governance — dependencies
+
+numpy>=1.24.0          # vectors and metrics
+scikit-learn>=1.3.0    # TF-IDF (mode hors-ligne)
+
+# --- Optional: for REAL-WORLD use -----------------------------------
+# sentence-transformers gives a REAL dense embedding engine:
+#   sentence-transformers>=2.2.0   (model all-MiniLM-L6-v2)
+#   If it is absent, secukit.py falls back to deterministic TF-IDF retrieval.
+#
+# ollama gives a REAL local LLM for:
+#   - resolving ambiguous direct injections (Lab 31-1) that the patterns miss.
+#   ollama>=0.3.0
+#   Requires the Ollama server and a model pulled, e.g.  ollama pull mistral
+#   Then:  OLLAMA_MODEL=mistral python lab31-1_injection_firewall.py
+#   If it is absent, secukit.py uses deterministic rules (motifs
+#   injection, document scanning, ABAC, audit): the labs stay runnable
+#   and reproducible.
+#
+# NO API key is ever required.

@@ -1,0 +1,12 @@
+# ch07-ai-ready — dependencies
+# The core of the labs runs on the Python standard library (Lab 7-1, 7-3, 7-4, 7-5).
+#
+# Lab 7-2 (retrieval measurement) illustrates three engines. The in-house one
+# requiert rien. The other two are OPTIONAL and detected automatically:
+#   faiss-cpu>=1.7.0      # FAISS engine (optional)
+#   chromadb>=0.4.0       # ChromaDB engine (optional)
+#
+# Lab 7-4 (sparser) runs with nothing in OFFLINE mode. Optional LOCAL mode:
+#   install Ollama (https://ollama.com) then `ollama pull llama3.2`.
+#
+# No API key is required to run the labs.

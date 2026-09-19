@@ -1,0 +1,13 @@
+# ch19-ann-hnsw — dependencies
+
+numpy>=1.24.0          # vectors and linear algebra (core of every lab)
+
+# scikit-learn is NOT required: the Chapter 19 labs work directly
+# on vectors (approximate search), with NumPy alone.
+#
+# No API key, no network. Everything is deterministic (fixed seeds):
+# two runs give the same numbers.
+#
+# faiss and hnswlib (the real production ANN indexes) are deliberately NOT
+# used here: the point is to make HNSW navigation transparent.
+# In production you replace HNSWMini with one of these indexes, whose interface is close.

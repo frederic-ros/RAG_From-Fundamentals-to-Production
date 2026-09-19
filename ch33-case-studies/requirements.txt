@@ -1,0 +1,11 @@
+# ch33-case-studies — dependencies
+
+# This chapter is the GRAND SYNTHESIS: a conceptual test bench of architectures.
+# It is PURELY deterministic and needs NO third-party library —
+# the Python standard library is enough.
+
+# (numpy is listed for consistency with the other chapters, but archikit.py
+#  works without it.)
+numpy>=1.24.0   # optionnel ; non requis par archikit.py
+
+# NO API key is ever required.

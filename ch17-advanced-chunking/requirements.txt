@@ -1,0 +1,12 @@
+# ch17-advanced-chunking — dependencies
+scikit-learn>=1.3.0    # TF-IDF similarity (deterministic, offline baseline)
+
+# Optional — dense embeddings (they fully reveal Late Chunking and Contextual Retrieval) :
+#   sentence-transformers>=2.2.0   (model all-MiniLM-L6-v2)
+#   Without it, embeddings.py falls back to TF-IDF, with no network and no API key.
+
+# Optional — visual interface of Lab 17-6 :
+#   streamlit>=1.30.0
+#   (the console version does not require it)
+
+# No API key is required to run the labs.

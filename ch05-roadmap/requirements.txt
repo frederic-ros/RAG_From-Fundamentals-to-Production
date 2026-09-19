@@ -1,0 +1,8 @@
+# ch05-roadmap — dependencies
+#
+# None. Every lab of this chapter runs on the Python standard library alone:
+# they produce framing sheets, an estate map, a roadmap and an evaluation set,
+# with no numerical computation and no third-party library.
+#
+# Python 3.10 or higher is the only requirement.
+# No API key is required to run the labs.

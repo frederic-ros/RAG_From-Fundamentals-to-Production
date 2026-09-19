@@ -1,0 +1,14 @@
+# ch06-ingestion — dependencies
+# Test-document generation, labs 6-1 to 6-3:
+python-docx>=1.1.0
+beautifulsoup4>=4.12.0
+pypdf>=4.0.0
+pdfplumber>=0.11.0
+reportlab>=4.0.0
+Pillow>=10.0.0
+
+# Lab 6-4 and Lab 6-5 run with nothing more in OFFLINE mode (the default).
+# For LOCAL mode (optional, free, no key): install Ollama
+#   https://ollama.com  puis  `ollama pull llava`  (vision, Lab 6-4)
+#                              `ollama pull llama3.2`  (text, Lab 6-5)
+# No API key is required to run the labs.

@@ -1,0 +1,30 @@
+# ch27-hypergraphs-hierarchy — dependencies
+
+numpy>=1.24.0          # vectors and metrics
+scikit-learn>=1.3.0   # TF-IDF, k-means, metrics (offline mode)
+
+# --- Optional: better clustering -------------------------------------
+# hdbscan discovers themes by density, without fixing k (Lab 27-2):
+#   hdbscan>=0.8.33
+#   If it is absent, multikit.py uses k-means with a fixed k.
+
+# --- Optional: hypergraph visualisation --------------------------
+# hypernetx to manipulate and visualise hyperedges:
+#   hypernetx>=2.0
+#   If it is absent, multikit.py utilise its internal hypergraph structure.
+
+# --- Optional: for REAL-WORLD use -----------------------------------
+# sentence-transformers gives a REAL dense embedding engine:
+#   sentence-transformers>=2.2.0   (model all-MiniLM-L6-v2)
+#   If it is absent, multikit.py falls back to deterministic TF-IDF retrieval.
+#
+# ollama gives a REAL local LLM for:
+#   - the abstractive summaries of the hierarchical index and of RAPTOR (Lab 27-3, Lab 27-4) ;
+#   - question routing (Lab 27-5, Lab 27-7).
+#   ollama>=0.3.0
+#   Requires the Ollama server and a model pulled, e.g.  ollama pull llama3.2
+#   Then:  OLLAMA_MODEL=llama3.2 python lab27-4_raptor.py
+#   If it is absent, multikit.py uses deterministic extractive summaries et
+#   a rule-based router : the labs stay runnable and reproducible.
+#
+# NO API key is ever required.

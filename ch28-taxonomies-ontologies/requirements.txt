@@ -1,0 +1,20 @@
+# ch28-taxonomies-ontologies — dependencies
+
+numpy>=1.24.0          # vectors and metrics
+scikit-learn>=1.3.0    # TF-IDF (mode hors-ligne)
+
+# --- Optional: for REAL-WORLD use -----------------------------------
+# sentence-transformers gives a REAL dense embedding engine:
+#   sentence-transformers>=2.2.0   (model all-MiniLM-L6-v2)
+#   If it is absent, metierkit.py falls back to deterministic TF-IDF retrieval.
+#
+# ollama gives a REAL local LLM for:
+#   - the query-to-taxonomy-concept mapping (Lab 28-1, Lab 28-6) ;
+#   - schema-guided triple extraction (Lab 28-3, Lab 28-5).
+#   ollama>=0.3.0
+#   Requires the Ollama server and a model pulled, e.g.  ollama pull mistral
+#   Then:  OLLAMA_MODEL=mistral python lab28-3_schema_constrained_extraction.py
+#   If it is absent, metierkit.py utilise a lexical mapping and an extraction
+#   by deterministic templates : the labs stay runnable and reproducible.
+#
+# NO API key is ever required.
